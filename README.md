@@ -7,6 +7,7 @@ This is an unofficial X3 pi deployment of HiFT[1] based on Python, whose officia
 Tracker | MACs | Params | FPS | Avg Latency | DDR Latency | Subgraph | BPU Util1 | BPU Util2 | DTB70 Success
 --- | --- | --- | --- |--- |--- |--- |--- |--- |---
 HiFT | 4.83G | 9.98M | 4.215 | 941.55ms | 884.52ms | 33 | 19.29% | 19.94% | 0.594
+
 We test BPU utilization rate by using hrut_somstatus while testing static performance with 4 threads:
 ```
 hrut_somstatus -n 10000 -d 1
