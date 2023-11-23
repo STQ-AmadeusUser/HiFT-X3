@@ -1,0 +1,527 @@
+2023-11-23 09:38:34,338 file: tool_utils.py func: tool_utils line No: 73 log will be stored in /home/users/zengpeng.sun/tianqi.shen/Tracking/Aerial/HiFT-Deployment/deploy/hb_mapper_checker.log
+2023-11-23 09:38:34,339 file: hb_mapper.py func: hb_mapper line No: 69 Start hb_mapper....
+2023-11-23 09:38:34,339 file: hb_mapper.py func: hb_mapper line No: 70 hbdk version 3.48.6
+2023-11-23 09:38:34,339 file: hb_mapper.py func: hb_mapper line No: 71 horizon_nn version 0.21.2
+2023-11-23 09:38:34,339 file: hb_mapper.py func: hb_mapper line No: 72 hb_mapper version 1.21.6
+2023-11-23 09:38:34,433 file: helper.py func: helper line No: 145 Model input names: ['input1', 'input2']
+2023-11-23 09:38:34,439 file: hb_mapper_checker.py func: hb_mapper_checker line No: 103 Model type: onnx
+2023-11-23 09:38:34,439 file: hb_mapper_checker.py func: hb_mapper_checker line No: 104 march: bernoulli2
+2023-11-23 09:38:34,439 file: hb_mapper_checker.py func: hb_mapper_checker line No: 109 input names ['input1', 'input2']
+2023-11-23 09:38:34,439 file: hb_mapper_checker.py func: hb_mapper_checker line No: 110 input shapes {'input1': [1, 3, 127, 127], 'input2': [1, 3, 287, 287]}
+2023-11-23 09:38:34,524 file: helper.py func: helper line No: 145 Model input names: ['input1', 'input2']
+2023-11-23 09:38:34,525 file: hb_mapper_checker.py func: hb_mapper_checker line No: 116 Begin model checking....
+2023-11-23 09:38:34,541 file: build.py func: build line No: 32 [Thu Nov 23 09:38:34 2023] Start to Horizon NN Model Convert.
+2023-11-23 09:38:34,542 file: build.py func: build line No: 92 HorizonNN version: 0.21.2
+2023-11-23 09:38:34,542 file: build.py func: build line No: 102 HBDK version: 3.48.6
+2023-11-23 09:38:34,542 file: model_debug.py func: model_debug line No: 61 Loading horizon_nn debug methods:[]
+2023-11-23 09:38:34,542 file: hbdk_dict_parser.py func: hbdk_dict_parser line No: 36 Parsing the hbdk parameter:{'hbdk_pass_through_params': '--O0'}
+2023-11-23 09:38:34,542 file: build.py func: build line No: 149 The specified model compilation architecture: bernoulli2.
+2023-11-23 09:38:34,542 file: build.py func: build line No: 151 The specified model compilation optimization parameters: [].
+2023-11-23 09:38:34,542 file: build.py func: build line No: 32 [Thu Nov 23 09:38:34 2023] Start to parse the onnx model.
+2023-11-23 09:38:34,925 file: onnx_parser.py func: onnx_parser line No: 125 Input ONNX model infomation:
+ONNX IR version:          6
+Opset version:            [11, 1]
+Producer:                 pytorch1.8
+Domain:                   none
+Input name:               input1, [1, 3, 127, 127]
+Input name:               input2, [1, 3, 287, 287]
+Output name:              output1, [1, 4, 11, 11]
+Output name:              output2, [121]
+Output name:              output3, [121]
+2023-11-23 09:38:35,172 file: build.py func: build line No: 35 [Thu Nov 23 09:38:35 2023] End to parse the onnx model.
+2023-11-23 09:38:35,217 file: build.py func: build line No: 200 Saving model: ./.hb_check/original_float_model.onnx.
+2023-11-23 09:38:35,218 file: build.py func: build line No: 32 [Thu Nov 23 09:38:35 2023] Start to optimize the model.
+2023-11-23 09:38:37,678 file: build.py func: build line No: 35 [Thu Nov 23 09:38:37 2023] End to optimize the model.
+2023-11-23 09:38:37,761 file: build.py func: build line No: 200 Saving model: ./.hb_check/optimized_float_model.onnx.
+2023-11-23 09:38:37,761 file: build.py func: build line No: 32 [Thu Nov 23 09:38:37 2023] Start to calibrate the model.
+2023-11-23 09:38:38,035 file: calibration_data_set.py func: calibration_data_set line No: 89 input name: input1,  number_of_samples: 1
+2023-11-23 09:38:38,035 file: calibration_data_set.py func: calibration_data_set line No: 89 input name: input2,  number_of_samples: 1
+2023-11-23 09:38:38,035 file: calibration_data_set.py func: calibration_data_set line No: 100 There are 1 samples in the calibration data set.
+2023-11-23 09:38:38,647 file: max_calibrater.py func: max_calibrater line No: 68 Run calibration model with max method.
+2023-11-23 09:38:39,197 file: calibrater.py func: calibrater line No: 208 Calibration using batch 1
+2023-11-23 09:38:39,981 file: build.py func: build line No: 35 [Thu Nov 23 09:38:39 2023] End to calibrate the model.
+2023-11-23 09:38:40,062 file: build.py func: build line No: 200 Saving model: ./.hb_check/calibrated_model.onnx.
+2023-11-23 09:38:40,062 file: build.py func: build line No: 32 [Thu Nov 23 09:38:40 2023] Start to quantize the model.
+2023-11-23 09:38:45,796 file: build.py func: build line No: 35 [Thu Nov 23 09:38:45 2023] End to quantize the model.
+2023-11-23 09:38:46,363 file: build.py func: build line No: 200 Saving model: ./.hb_check/quantized_model.onnx.
+2023-11-23 09:38:48,097 file: build.py func: build line No: 32 [Thu Nov 23 09:38:48 2023] Start to compile the model with march bernoulli2.
+2023-11-23 09:38:48,097 file: build.py func: build line No: 35 [Thu Nov 23 09:38:48 2023] End to compile the model with march bernoulli2.
+2023-11-23 09:38:48,904 file: hybrid_build.py func: hybrid_build line No: 134 Compile submodel: torch-jit-export_subgraph_0
+2023-11-23 09:38:49,276 file: hbdk_cc.py func: hbdk_cc line No: 115 hbdk-cc parameters:['--O0', '--input-layout', 'NHWC', '--output-layout', 'NCHW']
+2023-11-23 09:38:49,277 file: hbdk_cc.py func: hbdk_cc line No: 116 hbdk-cc command used:hbdk-cc -f hbir -m /tmp/tmpjnr0ns5m/torch-jit-export_subgraph_0.hbir -o /tmp/tmpjnr0ns5m/torch-jit-export_subgraph_0.hbm --march bernoulli2 --progressbar --O0 --input-layout NHWC --output-layout NCHW
+2023-11-23 09:38:49,511 file: tool_utils.py func: tool_utils line No: 322 consumed time 0.148366
+2023-11-23 09:38:49,636 file: tool_utils.py func: tool_utils line No: 322 FPS=221.62, latency = 4512.1 us, DDR = 9168512 bytes   (see ./.hb_check/torch-jit-export_subgraph_0.html)
+2023-11-23 09:38:49,652 file: hybrid_build.py func: hybrid_build line No: 134 Compile submodel: torch-jit-export_subgraph_1
+2023-11-23 09:38:50,102 file: hbdk_cc.py func: hbdk_cc line No: 115 hbdk-cc parameters:['--O0', '--input-layout', 'NHWC', '--output-layout', 'NCHW']
+2023-11-23 09:38:50,102 file: hbdk_cc.py func: hbdk_cc line No: 116 hbdk-cc command used:hbdk-cc -f hbir -m /tmp/tmpjnr0ns5m/torch-jit-export_subgraph_1.hbir -o /tmp/tmpjnr0ns5m/torch-jit-export_subgraph_1.hbm --march bernoulli2 --progressbar --O0 --input-layout NHWC --output-layout NCHW
+2023-11-23 09:38:50,390 file: tool_utils.py func: tool_utils line No: 322 consumed time 0.227831
+2023-11-23 09:38:50,524 file: tool_utils.py func: tool_utils line No: 322 FPS=34.78, latency = 28748.1 us, DDR = 32893696 bytes   (see ./.hb_check/torch-jit-export_subgraph_1.html)
+2023-11-23 09:38:50,540 file: hybrid_build.py func: hybrid_build line No: 134 Compile submodel: torch-jit-export_subgraph_2
+2023-11-23 09:38:50,712 file: hbdk_cc.py func: hbdk_cc line No: 115 hbdk-cc parameters:['--O0', '--input-layout', 'NHWC', '--output-layout', 'NCHW']
+2023-11-23 09:38:50,712 file: hbdk_cc.py func: hbdk_cc line No: 116 hbdk-cc command used:hbdk-cc -f hbir -m /tmp/tmpjnr0ns5m/torch-jit-export_subgraph_2.hbir -o /tmp/tmpjnr0ns5m/torch-jit-export_subgraph_2.hbm --march bernoulli2 --progressbar --O0 --input-layout NHWC --output-layout NCHW
+2023-11-23 09:38:50,864 file: tool_utils.py func: tool_utils line No: 322 consumed time 0.0737827
+2023-11-23 09:38:50,965 file: tool_utils.py func: tool_utils line No: 322 FPS=1242.44, latency = 804.9 us, DDR = 1815552 bytes   (see ./.hb_check/torch-jit-export_subgraph_2.html)
+2023-11-23 09:38:50,967 file: hybrid_build.py func: hybrid_build line No: 134 Compile submodel: torch-jit-export_subgraph_3
+2023-11-23 09:38:51,193 file: hbdk_cc.py func: hbdk_cc line No: 115 hbdk-cc parameters:['--O0', '--input-layout', 'NHWC', '--output-layout', 'NHWC']
+2023-11-23 09:38:51,193 file: hbdk_cc.py func: hbdk_cc line No: 116 hbdk-cc command used:hbdk-cc -f hbir -m /tmp/tmpjnr0ns5m/torch-jit-export_subgraph_3.hbir -o /tmp/tmpjnr0ns5m/torch-jit-export_subgraph_3.hbm --march bernoulli2 --progressbar --O0 --input-layout NHWC --output-layout NHWC
+2023-11-23 09:38:51,341 file: tool_utils.py func: tool_utils line No: 322 consumed time 0.0910612
+2023-11-23 09:38:51,445 file: tool_utils.py func: tool_utils line No: 322 FPS=474.87, latency = 2105.9 us, DDR = 5084384 bytes   (see ./.hb_check/torch-jit-export_subgraph_3.html)
+2023-11-23 09:38:51,450 file: hybrid_build.py func: hybrid_build line No: 134 Compile submodel: torch-jit-export_subgraph_4
+2023-11-23 09:38:51,558 file: hbdk_cc.py func: hbdk_cc line No: 115 hbdk-cc parameters:['--O0', '--input-layout', 'NHWC', '--output-layout', 'NCHW']
+2023-11-23 09:38:51,558 file: hbdk_cc.py func: hbdk_cc line No: 116 hbdk-cc command used:hbdk-cc -f hbir -m /tmp/tmpjnr0ns5m/torch-jit-export_subgraph_4.hbir -o /tmp/tmpjnr0ns5m/torch-jit-export_subgraph_4.hbm --march bernoulli2 --progressbar --O0 --input-layout NHWC --output-layout NCHW
+2023-11-23 09:38:51,644 file: tool_utils.py func: tool_utils line No: 322 consumed time 0.017837
+2023-11-23 09:38:51,735 file: tool_utils.py func: tool_utils line No: 322 FPS=2027.18, latency = 493.3 us, DDR = 1375552 bytes   (see ./.hb_check/torch-jit-export_subgraph_4.html)
+2023-11-23 09:38:51,736 file: hybrid_build.py func: hybrid_build line No: 134 Compile submodel: torch-jit-export_subgraph_5
+2023-11-23 09:38:51,882 file: hbdk_cc.py func: hbdk_cc line No: 115 hbdk-cc parameters:['--O0', '--input-layout', 'NHWC', '--output-layout', 'NCHW']
+2023-11-23 09:38:51,882 file: hbdk_cc.py func: hbdk_cc line No: 116 hbdk-cc command used:hbdk-cc -f hbir -m /tmp/tmpjnr0ns5m/torch-jit-export_subgraph_5.hbir -o /tmp/tmpjnr0ns5m/torch-jit-export_subgraph_5.hbm --march bernoulli2 --progressbar --O0 --input-layout NHWC --output-layout NCHW
+2023-11-23 09:38:51,968 file: tool_utils.py func: tool_utils line No: 322 consumed time 0.0283661
+2023-11-23 09:38:52,056 file: tool_utils.py func: tool_utils line No: 322 FPS=2027.18, latency = 493.3 us, DDR = 1375552 bytes   (see ./.hb_check/torch-jit-export_subgraph_5.html)
+2023-11-23 09:38:52,057 file: hybrid_build.py func: hybrid_build line No: 134 Compile submodel: torch-jit-export_subgraph_6
+2023-11-23 09:38:52,209 file: hbdk_cc.py func: hbdk_cc line No: 115 hbdk-cc parameters:['--O0', '--input-layout', 'NHWC', '--output-layout', 'NHWC']
+2023-11-23 09:38:52,209 file: hbdk_cc.py func: hbdk_cc line No: 116 hbdk-cc command used:hbdk-cc -f hbir -m /tmp/tmpjnr0ns5m/torch-jit-export_subgraph_6.hbir -o /tmp/tmpjnr0ns5m/torch-jit-export_subgraph_6.hbm --march bernoulli2 --progressbar --O0 --input-layout NHWC --output-layout NHWC
+2023-11-23 09:38:52,450 file: tool_utils.py func: tool_utils line No: 322 consumed time 0.165373
+2023-11-23 09:38:52,549 file: tool_utils.py func: tool_utils line No: 322 FPS=512.82, latency = 1950.0 us, DDR = 1435840 bytes   (see ./.hb_check/torch-jit-export_subgraph_6.html)
+2023-11-23 09:38:52,556 file: hybrid_build.py func: hybrid_build line No: 134 Compile submodel: torch-jit-export_subgraph_7
+2023-11-23 09:38:52,697 file: hbdk_cc.py func: hbdk_cc line No: 115 hbdk-cc parameters:['--O0', '--input-layout', 'NHWC', '--output-layout', 'NHWC']
+2023-11-23 09:38:52,697 file: hbdk_cc.py func: hbdk_cc line No: 116 hbdk-cc command used:hbdk-cc -f hbir -m /tmp/tmpjnr0ns5m/torch-jit-export_subgraph_7.hbir -o /tmp/tmpjnr0ns5m/torch-jit-export_subgraph_7.hbm --march bernoulli2 --progressbar --O0 --input-layout NHWC --output-layout NHWC
+2023-11-23 09:38:52,922 file: tool_utils.py func: tool_utils line No: 322 consumed time 0.169305
+2023-11-23 09:38:53,017 file: tool_utils.py func: tool_utils line No: 322 FPS=512.82, latency = 1950.0 us, DDR = 1435840 bytes   (see ./.hb_check/torch-jit-export_subgraph_7.html)
+2023-11-23 09:38:53,025 file: hybrid_build.py func: hybrid_build line No: 134 Compile submodel: torch-jit-export_subgraph_8
+2023-11-23 09:38:53,169 file: hbdk_cc.py func: hbdk_cc line No: 115 hbdk-cc parameters:['--O0', '--input-layout', 'NHWC', '--output-layout', 'NHWC']
+2023-11-23 09:38:53,169 file: hbdk_cc.py func: hbdk_cc line No: 116 hbdk-cc command used:hbdk-cc -f hbir -m /tmp/tmpjnr0ns5m/torch-jit-export_subgraph_8.hbir -o /tmp/tmpjnr0ns5m/torch-jit-export_subgraph_8.hbm --march bernoulli2 --progressbar --O0 --input-layout NHWC --output-layout NHWC
+2023-11-23 09:38:53,410 file: tool_utils.py func: tool_utils line No: 322 consumed time 0.166949
+2023-11-23 09:38:53,505 file: tool_utils.py func: tool_utils line No: 322 FPS=512.82, latency = 1950.0 us, DDR = 1435840 bytes   (see ./.hb_check/torch-jit-export_subgraph_8.html)
+2023-11-23 09:38:53,513 file: hybrid_build.py func: hybrid_build line No: 134 Compile submodel: torch-jit-export_subgraph_9
+2023-11-23 09:38:53,647 file: hbdk_cc.py func: hbdk_cc line No: 115 hbdk-cc parameters:['--O0', '--input-layout', 'NHWC', '--output-layout', 'NHWC']
+2023-11-23 09:38:53,647 file: hbdk_cc.py func: hbdk_cc line No: 116 hbdk-cc command used:hbdk-cc -f hbir -m /tmp/tmpjnr0ns5m/torch-jit-export_subgraph_9.hbir -o /tmp/tmpjnr0ns5m/torch-jit-export_subgraph_9.hbm --march bernoulli2 --progressbar --O0 --input-layout NHWC --output-layout NHWC
+2023-11-23 09:38:53,996 file: tool_utils.py func: tool_utils line No: 322 consumed time 0.248054
+2023-11-23 09:38:54,099 file: tool_utils.py func: tool_utils line No: 322 FPS=512.82, latency = 1950.0 us, DDR = 1435840 bytes   (see ./.hb_check/torch-jit-export_subgraph_9.html)
+2023-11-23 09:38:54,108 file: hybrid_build.py func: hybrid_build line No: 134 Compile submodel: torch-jit-export_subgraph_10
+2023-11-23 09:38:54,207 file: hbdk_cc.py func: hbdk_cc line No: 115 hbdk-cc parameters:['--O0', '--input-layout', 'NHWC', '--output-layout', 'NCHW']
+2023-11-23 09:38:54,207 file: hbdk_cc.py func: hbdk_cc line No: 116 hbdk-cc command used:hbdk-cc -f hbir -m /tmp/tmpjnr0ns5m/torch-jit-export_subgraph_10.hbir -o /tmp/tmpjnr0ns5m/torch-jit-export_subgraph_10.hbm --march bernoulli2 --progressbar --O0 --input-layout NHWC --output-layout NCHW
+2023-11-23 09:38:54,336 file: tool_utils.py func: tool_utils line No: 322 consumed time 0.0413942
+2023-11-23 09:38:54,431 file: tool_utils.py func: tool_utils line No: 322 FPS=1958.99, latency = 510.5 us, DDR = 1453568 bytes   (see ./.hb_check/torch-jit-export_subgraph_10.html)
+2023-11-23 09:38:54,432 file: hybrid_build.py func: hybrid_build line No: 134 Compile submodel: torch-jit-export_subgraph_11
+2023-11-23 09:38:54,583 file: hbdk_cc.py func: hbdk_cc line No: 115 hbdk-cc parameters:['--O0', '--input-layout', 'NHWC', '--output-layout', 'NHWC']
+2023-11-23 09:38:54,583 file: hbdk_cc.py func: hbdk_cc line No: 116 hbdk-cc command used:hbdk-cc -f hbir -m /tmp/tmpjnr0ns5m/torch-jit-export_subgraph_11.hbir -o /tmp/tmpjnr0ns5m/torch-jit-export_subgraph_11.hbm --march bernoulli2 --progressbar --O0 --input-layout NHWC --output-layout NHWC
+2023-11-23 09:38:54,941 file: tool_utils.py func: tool_utils line No: 322 consumed time 0.269166
+2023-11-23 09:38:55,085 file: tool_utils.py func: tool_utils line No: 322 FPS=189.26, latency = 5283.7 us, DDR = 6166720 bytes   (see ./.hb_check/torch-jit-export_subgraph_11.html)
+2023-11-23 09:38:55,103 file: hybrid_build.py func: hybrid_build line No: 134 Compile submodel: torch-jit-export_subgraph_12
+2023-11-23 09:38:55,215 file: hbdk_cc.py func: hbdk_cc line No: 115 hbdk-cc parameters:['--O0', '--input-layout', 'NHWC', '--output-layout', 'NHWC']
+2023-11-23 09:38:55,215 file: hbdk_cc.py func: hbdk_cc line No: 116 hbdk-cc command used:hbdk-cc -f hbir -m /tmp/tmpjnr0ns5m/torch-jit-export_subgraph_12.hbir -o /tmp/tmpjnr0ns5m/torch-jit-export_subgraph_12.hbm --march bernoulli2 --progressbar --O0 --input-layout NHWC --output-layout NHWC
+2023-11-23 09:38:55,832 file: tool_utils.py func: tool_utils line No: 322 consumed time 0.548272
+2023-11-23 09:38:56,021 file: tool_utils.py func: tool_utils line No: 322 FPS=209.5, latency = 4773.2 us, DDR = 2070208 bytes   (see ./.hb_check/torch-jit-export_subgraph_12.html)
+2023-11-23 09:38:56,047 file: hybrid_build.py func: hybrid_build line No: 134 Compile submodel: torch-jit-export_subgraph_13
+2023-11-23 09:38:56,177 file: hbdk_cc.py func: hbdk_cc line No: 115 hbdk-cc parameters:['--O0', '--input-layout', 'NHWC', '--output-layout', 'NHWC']
+2023-11-23 09:38:56,177 file: hbdk_cc.py func: hbdk_cc line No: 116 hbdk-cc command used:hbdk-cc -f hbir -m /tmp/tmpjnr0ns5m/torch-jit-export_subgraph_13.hbir -o /tmp/tmpjnr0ns5m/torch-jit-export_subgraph_13.hbm --march bernoulli2 --progressbar --O0 --input-layout NHWC --output-layout NHWC
+2023-11-23 09:38:56,330 file: tool_utils.py func: tool_utils line No: 322 consumed time 0.0850843
+2023-11-23 09:38:56,453 file: tool_utils.py func: tool_utils line No: 322 FPS=436.33, latency = 2291.8 us, DDR = 4582464 bytes   (see ./.hb_check/torch-jit-export_subgraph_13.html)
+2023-11-23 09:38:56,459 file: hybrid_build.py func: hybrid_build line No: 134 Compile submodel: torch-jit-export_subgraph_14
+2023-11-23 09:38:56,560 file: hbdk_cc.py func: hbdk_cc line No: 115 hbdk-cc parameters:['--O0', '--input-layout', 'NHWC', '--output-layout', 'NCHW']
+2023-11-23 09:38:56,560 file: hbdk_cc.py func: hbdk_cc line No: 116 hbdk-cc command used:hbdk-cc -f hbir -m /tmp/tmpjnr0ns5m/torch-jit-export_subgraph_14.hbir -o /tmp/tmpjnr0ns5m/torch-jit-export_subgraph_14.hbm --march bernoulli2 --progressbar --O0 --input-layout NHWC --output-layout NCHW
+2023-11-23 09:38:56,580 file: tool_utils.py func: tool_utils line No: 317 Can not find the scale for node Mul_349_NCHW2NHWC_LayoutConvert_Input0
+2023-11-23 09:38:56,643 file: tool_utils.py func: tool_utils line No: 322 consumed time 0.0206184
+2023-11-23 09:38:56,707 file: tool_utils.py func: tool_utils line No: 322 FPS=5938.35, latency = 168.4 us, DDR = 565888 bytes   (see ./.hb_check/torch-jit-export_subgraph_14.html)
+2023-11-23 09:38:56,708 file: hybrid_build.py func: hybrid_build line No: 134 Compile submodel: torch-jit-export_subgraph_15
+2023-11-23 09:38:56,812 file: hbdk_cc.py func: hbdk_cc line No: 115 hbdk-cc parameters:['--O0', '--input-layout', 'NHWC', '--output-layout', 'NHWC']
+2023-11-23 09:38:56,812 file: hbdk_cc.py func: hbdk_cc line No: 116 hbdk-cc command used:hbdk-cc -f hbir -m /tmp/tmpjnr0ns5m/torch-jit-export_subgraph_15.hbir -o /tmp/tmpjnr0ns5m/torch-jit-export_subgraph_15.hbm --march bernoulli2 --progressbar --O0 --input-layout NHWC --output-layout NHWC
+2023-11-23 09:38:57,155 file: tool_utils.py func: tool_utils line No: 322 consumed time 0.27012
+2023-11-23 09:38:57,286 file: tool_utils.py func: tool_utils line No: 322 FPS=512.82, latency = 1950.0 us, DDR = 1435840 bytes   (see ./.hb_check/torch-jit-export_subgraph_15.html)
+2023-11-23 09:38:57,299 file: hybrid_build.py func: hybrid_build line No: 134 Compile submodel: torch-jit-export_subgraph_16
+2023-11-23 09:38:57,445 file: hbdk_cc.py func: hbdk_cc line No: 115 hbdk-cc parameters:['--O0', '--input-layout', 'NHWC', '--output-layout', 'NHWC']
+2023-11-23 09:38:57,445 file: hbdk_cc.py func: hbdk_cc line No: 116 hbdk-cc command used:hbdk-cc -f hbir -m /tmp/tmpjnr0ns5m/torch-jit-export_subgraph_16.hbir -o /tmp/tmpjnr0ns5m/torch-jit-export_subgraph_16.hbm --march bernoulli2 --progressbar --O0 --input-layout NHWC --output-layout NHWC
+2023-11-23 09:38:57,735 file: tool_utils.py func: tool_utils line No: 322 consumed time 0.218194
+2023-11-23 09:38:57,839 file: tool_utils.py func: tool_utils line No: 322 FPS=512.82, latency = 1950.0 us, DDR = 1435840 bytes   (see ./.hb_check/torch-jit-export_subgraph_16.html)
+2023-11-23 09:38:57,847 file: hybrid_build.py func: hybrid_build line No: 134 Compile submodel: torch-jit-export_subgraph_17
+2023-11-23 09:38:58,028 file: hbdk_cc.py func: hbdk_cc line No: 115 hbdk-cc parameters:['--O0', '--input-layout', 'NHWC', '--output-layout', 'NHWC']
+2023-11-23 09:38:58,028 file: hbdk_cc.py func: hbdk_cc line No: 116 hbdk-cc command used:hbdk-cc -f hbir -m /tmp/tmpjnr0ns5m/torch-jit-export_subgraph_17.hbir -o /tmp/tmpjnr0ns5m/torch-jit-export_subgraph_17.hbm --march bernoulli2 --progressbar --O0 --input-layout NHWC --output-layout NHWC
+2023-11-23 09:38:58,964 file: tool_utils.py func: tool_utils line No: 322 consumed time 0.850911
+2023-11-23 09:38:59,238 file: tool_utils.py func: tool_utils line No: 322 FPS=160.77, latency = 6220.0 us, DDR = 2759360 bytes   (see ./.hb_check/torch-jit-export_subgraph_17.html)
+2023-11-23 09:38:59,276 file: hybrid_build.py func: hybrid_build line No: 134 Compile submodel: torch-jit-export_subgraph_18
+2023-11-23 09:38:59,414 file: hbdk_cc.py func: hbdk_cc line No: 115 hbdk-cc parameters:['--O0', '--input-layout', 'NHWC', '--output-layout', 'NHWC']
+2023-11-23 09:38:59,415 file: hbdk_cc.py func: hbdk_cc line No: 116 hbdk-cc command used:hbdk-cc -f hbir -m /tmp/tmpjnr0ns5m/torch-jit-export_subgraph_18.hbir -o /tmp/tmpjnr0ns5m/torch-jit-export_subgraph_18.hbm --march bernoulli2 --progressbar --O0 --input-layout NHWC --output-layout NHWC
+2023-11-23 09:38:59,672 file: tool_utils.py func: tool_utils line No: 322 consumed time 0.178407
+2023-11-23 09:38:59,773 file: tool_utils.py func: tool_utils line No: 322 FPS=512.82, latency = 1950.0 us, DDR = 1435840 bytes   (see ./.hb_check/torch-jit-export_subgraph_18.html)
+2023-11-23 09:38:59,780 file: hybrid_build.py func: hybrid_build line No: 134 Compile submodel: torch-jit-export_subgraph_19
+2023-11-23 09:38:59,992 file: hbdk_cc.py func: hbdk_cc line No: 115 hbdk-cc parameters:['--O0', '--input-layout', 'NHWC', '--output-layout', 'NHWC']
+2023-11-23 09:38:59,992 file: hbdk_cc.py func: hbdk_cc line No: 116 hbdk-cc command used:hbdk-cc -f hbir -m /tmp/tmpjnr0ns5m/torch-jit-export_subgraph_19.hbir -o /tmp/tmpjnr0ns5m/torch-jit-export_subgraph_19.hbm --march bernoulli2 --progressbar --O0 --input-layout NHWC --output-layout NHWC
+2023-11-23 09:39:00,328 file: tool_utils.py func: tool_utils line No: 322 consumed time 0.277079
+2023-11-23 09:39:00,461 file: tool_utils.py func: tool_utils line No: 322 FPS=189.26, latency = 5283.7 us, DDR = 6166720 bytes   (see ./.hb_check/torch-jit-export_subgraph_19.html)
+2023-11-23 09:39:00,474 file: hybrid_build.py func: hybrid_build line No: 134 Compile submodel: torch-jit-export_subgraph_20
+2023-11-23 09:39:00,629 file: hbdk_cc.py func: hbdk_cc line No: 115 hbdk-cc parameters:['--O0', '--input-layout', 'NHWC', '--output-layout', 'NHWC']
+2023-11-23 09:39:00,629 file: hbdk_cc.py func: hbdk_cc line No: 116 hbdk-cc command used:hbdk-cc -f hbir -m /tmp/tmpjnr0ns5m/torch-jit-export_subgraph_20.hbir -o /tmp/tmpjnr0ns5m/torch-jit-export_subgraph_20.hbm --march bernoulli2 --progressbar --O0 --input-layout NHWC --output-layout NHWC
+2023-11-23 09:39:01,296 file: tool_utils.py func: tool_utils line No: 322 consumed time 0.605549
+2023-11-23 09:39:01,517 file: tool_utils.py func: tool_utils line No: 322 FPS=209.5, latency = 4773.2 us, DDR = 2070208 bytes   (see ./.hb_check/torch-jit-export_subgraph_20.html)
+2023-11-23 09:39:01,542 file: hybrid_build.py func: hybrid_build line No: 134 Compile submodel: torch-jit-export_subgraph_21
+2023-11-23 09:39:01,693 file: hbdk_cc.py func: hbdk_cc line No: 115 hbdk-cc parameters:['--O0', '--input-layout', 'NHWC', '--output-layout', 'NHWC']
+2023-11-23 09:39:01,694 file: hbdk_cc.py func: hbdk_cc line No: 116 hbdk-cc command used:hbdk-cc -f hbir -m /tmp/tmpjnr0ns5m/torch-jit-export_subgraph_21.hbir -o /tmp/tmpjnr0ns5m/torch-jit-export_subgraph_21.hbm --march bernoulli2 --progressbar --O0 --input-layout NHWC --output-layout NHWC
+2023-11-23 09:39:01,852 file: tool_utils.py func: tool_utils line No: 322 consumed time 0.0780653
+2023-11-23 09:39:01,978 file: tool_utils.py func: tool_utils line No: 322 FPS=436.33, latency = 2291.8 us, DDR = 4582464 bytes   (see ./.hb_check/torch-jit-export_subgraph_21.html)
+2023-11-23 09:39:01,985 file: hybrid_build.py func: hybrid_build line No: 134 Compile submodel: torch-jit-export_subgraph_22
+2023-11-23 09:39:02,131 file: hbdk_cc.py func: hbdk_cc line No: 115 hbdk-cc parameters:['--O0', '--input-layout', 'NHWC', '--output-layout', 'NCHW']
+2023-11-23 09:39:02,131 file: hbdk_cc.py func: hbdk_cc line No: 116 hbdk-cc command used:hbdk-cc -f hbir -m /tmp/tmpjnr0ns5m/torch-jit-export_subgraph_22.hbir -o /tmp/tmpjnr0ns5m/torch-jit-export_subgraph_22.hbm --march bernoulli2 --progressbar --O0 --input-layout NHWC --output-layout NCHW
+2023-11-23 09:39:02,148 file: tool_utils.py func: tool_utils line No: 317 Can not find the scale for node Mul_537_NCHW2NHWC_LayoutConvert_Input0
+2023-11-23 09:39:02,213 file: tool_utils.py func: tool_utils line No: 322 consumed time 0.0204206
+2023-11-23 09:39:02,315 file: tool_utils.py func: tool_utils line No: 322 FPS=5938.35, latency = 168.4 us, DDR = 565888 bytes   (see ./.hb_check/torch-jit-export_subgraph_22.html)
+2023-11-23 09:39:02,316 file: hybrid_build.py func: hybrid_build line No: 134 Compile submodel: torch-jit-export_subgraph_23
+2023-11-23 09:39:02,417 file: hbdk_cc.py func: hbdk_cc line No: 115 hbdk-cc parameters:['--O0', '--input-layout', 'NHWC', '--output-layout', 'NHWC']
+2023-11-23 09:39:02,417 file: hbdk_cc.py func: hbdk_cc line No: 116 hbdk-cc command used:hbdk-cc -f hbir -m /tmp/tmpjnr0ns5m/torch-jit-export_subgraph_23.hbir -o /tmp/tmpjnr0ns5m/torch-jit-export_subgraph_23.hbm --march bernoulli2 --progressbar --O0 --input-layout NHWC --output-layout NHWC
+2023-11-23 09:39:02,728 file: tool_utils.py func: tool_utils line No: 322 consumed time 0.234902
+2023-11-23 09:39:02,852 file: tool_utils.py func: tool_utils line No: 322 FPS=512.82, latency = 1950.0 us, DDR = 1435840 bytes   (see ./.hb_check/torch-jit-export_subgraph_23.html)
+2023-11-23 09:39:02,861 file: hybrid_build.py func: hybrid_build line No: 134 Compile submodel: torch-jit-export_subgraph_24
+2023-11-23 09:39:02,976 file: hbdk_cc.py func: hbdk_cc line No: 115 hbdk-cc parameters:['--O0', '--input-layout', 'NHWC', '--output-layout', 'NHWC']
+2023-11-23 09:39:02,976 file: hbdk_cc.py func: hbdk_cc line No: 116 hbdk-cc command used:hbdk-cc -f hbir -m /tmp/tmpjnr0ns5m/torch-jit-export_subgraph_24.hbir -o /tmp/tmpjnr0ns5m/torch-jit-export_subgraph_24.hbm --march bernoulli2 --progressbar --O0 --input-layout NHWC --output-layout NHWC
+2023-11-23 09:39:03,281 file: tool_utils.py func: tool_utils line No: 322 consumed time 0.243905
+2023-11-23 09:39:03,427 file: tool_utils.py func: tool_utils line No: 322 FPS=512.82, latency = 1950.0 us, DDR = 1435840 bytes   (see ./.hb_check/torch-jit-export_subgraph_24.html)
+2023-11-23 09:39:03,442 file: hybrid_build.py func: hybrid_build line No: 134 Compile submodel: torch-jit-export_subgraph_25
+2023-11-23 09:39:03,561 file: hbdk_cc.py func: hbdk_cc line No: 115 hbdk-cc parameters:['--O0', '--input-layout', 'NHWC', '--output-layout', 'NHWC']
+2023-11-23 09:39:03,561 file: hbdk_cc.py func: hbdk_cc line No: 116 hbdk-cc command used:hbdk-cc -f hbir -m /tmp/tmpjnr0ns5m/torch-jit-export_subgraph_25.hbir -o /tmp/tmpjnr0ns5m/torch-jit-export_subgraph_25.hbm --march bernoulli2 --progressbar --O0 --input-layout NHWC --output-layout NHWC
+2023-11-23 09:39:03,820 file: tool_utils.py func: tool_utils line No: 322 consumed time 0.178239
+2023-11-23 09:39:03,950 file: tool_utils.py func: tool_utils line No: 322 FPS=512.82, latency = 1950.0 us, DDR = 1435840 bytes   (see ./.hb_check/torch-jit-export_subgraph_25.html)
+2023-11-23 09:39:03,960 file: hybrid_build.py func: hybrid_build line No: 134 Compile submodel: torch-jit-export_subgraph_26
+2023-11-23 09:39:04,113 file: hbdk_cc.py func: hbdk_cc line No: 115 hbdk-cc parameters:['--O0', '--input-layout', 'NHWC', '--output-layout', 'NHWC']
+2023-11-23 09:39:04,113 file: hbdk_cc.py func: hbdk_cc line No: 116 hbdk-cc command used:hbdk-cc -f hbir -m /tmp/tmpjnr0ns5m/torch-jit-export_subgraph_26.hbir -o /tmp/tmpjnr0ns5m/torch-jit-export_subgraph_26.hbm --march bernoulli2 --progressbar --O0 --input-layout NHWC --output-layout NHWC
+2023-11-23 09:39:04,453 file: tool_utils.py func: tool_utils line No: 322 consumed time 0.258175
+2023-11-23 09:39:04,575 file: tool_utils.py func: tool_utils line No: 322 FPS=189.26, latency = 5283.7 us, DDR = 6166720 bytes   (see ./.hb_check/torch-jit-export_subgraph_26.html)
+2023-11-23 09:39:04,584 file: hybrid_build.py func: hybrid_build line No: 134 Compile submodel: torch-jit-export_subgraph_27
+2023-11-23 09:39:04,775 file: hbdk_cc.py func: hbdk_cc line No: 115 hbdk-cc parameters:['--O0', '--input-layout', 'NHWC', '--output-layout', 'NCHW']
+2023-11-23 09:39:04,776 file: hbdk_cc.py func: hbdk_cc line No: 116 hbdk-cc command used:hbdk-cc -f hbir -m /tmp/tmpjnr0ns5m/torch-jit-export_subgraph_27.hbir -o /tmp/tmpjnr0ns5m/torch-jit-export_subgraph_27.hbm --march bernoulli2 --progressbar --O0 --input-layout NHWC --output-layout NCHW
+2023-11-23 09:39:04,964 file: tool_utils.py func: tool_utils line No: 322 consumed time 0.101203
+2023-11-23 09:39:05,045 file: tool_utils.py func: tool_utils line No: 322 FPS=968.17, latency = 1032.9 us, DDR = 1819328 bytes   (see ./.hb_check/torch-jit-export_subgraph_27.html)
+2023-11-23 09:39:05,047 file: hybrid_build.py func: hybrid_build line No: 134 Compile submodel: torch-jit-export_subgraph_28
+2023-11-23 09:39:05,242 file: hbdk_cc.py func: hbdk_cc line No: 115 hbdk-cc parameters:['--O0', '--input-layout', 'NHWC', '--output-layout', 'NCHW']
+2023-11-23 09:39:05,242 file: hbdk_cc.py func: hbdk_cc line No: 116 hbdk-cc command used:hbdk-cc -f hbir -m /tmp/tmpjnr0ns5m/torch-jit-export_subgraph_28.hbir -o /tmp/tmpjnr0ns5m/torch-jit-export_subgraph_28.hbm --march bernoulli2 --progressbar --O0 --input-layout NHWC --output-layout NCHW
+2023-11-23 09:39:05,338 file: tool_utils.py func: tool_utils line No: 322 consumed time 0.0280091
+2023-11-23 09:39:05,428 file: tool_utils.py func: tool_utils line No: 322 FPS=1812.57, latency = 551.7 us, DDR = 1020352 bytes   (see ./.hb_check/torch-jit-export_subgraph_28.html)
+2023-11-23 09:39:05,430 file: hybrid_build.py func: hybrid_build line No: 134 Compile submodel: torch-jit-export_subgraph_29
+2023-11-23 09:39:05,556 file: hbdk_cc.py func: hbdk_cc line No: 115 hbdk-cc parameters:['--O0', '--input-layout', 'NHWC', '--output-layout', 'NCHW']
+2023-11-23 09:39:05,556 file: hbdk_cc.py func: hbdk_cc line No: 116 hbdk-cc command used:hbdk-cc -f hbir -m /tmp/tmpjnr0ns5m/torch-jit-export_subgraph_29.hbir -o /tmp/tmpjnr0ns5m/torch-jit-export_subgraph_29.hbm --march bernoulli2 --progressbar --O0 --input-layout NHWC --output-layout NCHW
+2023-11-23 09:39:05,692 file: tool_utils.py func: tool_utils line No: 322 consumed time 0.0638544
+2023-11-23 09:39:05,787 file: tool_utils.py func: tool_utils line No: 322 FPS=1812.57, latency = 551.7 us, DDR = 1020352 bytes   (see ./.hb_check/torch-jit-export_subgraph_29.html)
+2023-11-23 09:39:05,789 file: hybrid_build.py func: hybrid_build line No: 134 Compile submodel: torch-jit-export_subgraph_30
+2023-11-23 09:39:05,911 file: hbdk_cc.py func: hbdk_cc line No: 115 hbdk-cc parameters:['--O0', '--input-layout', 'NHWC', '--output-layout', 'NCHW']
+2023-11-23 09:39:05,912 file: hbdk_cc.py func: hbdk_cc line No: 116 hbdk-cc command used:hbdk-cc -f hbir -m /tmp/tmpjnr0ns5m/torch-jit-export_subgraph_30.hbir -o /tmp/tmpjnr0ns5m/torch-jit-export_subgraph_30.hbm --march bernoulli2 --progressbar --O0 --input-layout NHWC --output-layout NCHW
+2023-11-23 09:39:06,001 file: tool_utils.py func: tool_utils line No: 322 consumed time 0.00850618
+2023-11-23 09:39:06,070 file: tool_utils.py func: tool_utils line No: 322 FPS=12218.07, latency = 81.8 us, DDR = 212352 bytes   (see ./.hb_check/torch-jit-export_subgraph_30.html)
+2023-11-23 09:39:06,071 file: hybrid_build.py func: hybrid_build line No: 134 Compile submodel: torch-jit-export_subgraph_31
+2023-11-23 09:39:06,209 file: hbdk_cc.py func: hbdk_cc line No: 115 hbdk-cc parameters:['--O0', '--input-layout', 'NHWC', '--output-layout', 'NCHW']
+2023-11-23 09:39:06,209 file: hbdk_cc.py func: hbdk_cc line No: 116 hbdk-cc command used:hbdk-cc -f hbir -m /tmp/tmpjnr0ns5m/torch-jit-export_subgraph_31.hbir -o /tmp/tmpjnr0ns5m/torch-jit-export_subgraph_31.hbm --march bernoulli2 --progressbar --O0 --input-layout NHWC --output-layout NCHW
+2023-11-23 09:39:06,340 file: tool_utils.py func: tool_utils line No: 322 consumed time 0.0570741
+2023-11-23 09:39:06,425 file: tool_utils.py func: tool_utils line No: 322 FPS=1812.57, latency = 551.7 us, DDR = 1020352 bytes   (see ./.hb_check/torch-jit-export_subgraph_31.html)
+2023-11-23 09:39:06,427 file: hybrid_build.py func: hybrid_build line No: 134 Compile submodel: torch-jit-export_subgraph_32
+2023-11-23 09:39:06,589 file: hbdk_cc.py func: hbdk_cc line No: 115 hbdk-cc parameters:['--O0', '--input-layout', 'NHWC', '--output-layout', 'NCHW']
+2023-11-23 09:39:06,590 file: hbdk_cc.py func: hbdk_cc line No: 116 hbdk-cc command used:hbdk-cc -f hbir -m /tmp/tmpjnr0ns5m/torch-jit-export_subgraph_32.hbir -o /tmp/tmpjnr0ns5m/torch-jit-export_subgraph_32.hbm --march bernoulli2 --progressbar --O0 --input-layout NHWC --output-layout NCHW
+2023-11-23 09:39:06,689 file: tool_utils.py func: tool_utils line No: 322 consumed time 0.0330411
+2023-11-23 09:39:06,763 file: tool_utils.py func: tool_utils line No: 322 FPS=1812.57, latency = 551.7 us, DDR = 1020352 bytes   (see ./.hb_check/torch-jit-export_subgraph_32.html)
+2023-11-23 09:39:06,764 file: hybrid_build.py func: hybrid_build line No: 134 Compile submodel: torch-jit-export_subgraph_33
+2023-11-23 09:39:06,905 file: hbdk_cc.py func: hbdk_cc line No: 115 hbdk-cc parameters:['--O0', '--input-layout', 'NHWC', '--output-layout', 'NHWC']
+2023-11-23 09:39:06,905 file: hbdk_cc.py func: hbdk_cc line No: 116 hbdk-cc command used:hbdk-cc -f hbir -m /tmp/tmpjnr0ns5m/torch-jit-export_subgraph_33.hbir -o /tmp/tmpjnr0ns5m/torch-jit-export_subgraph_33.hbm --march bernoulli2 --progressbar --O0 --input-layout NHWC --output-layout NHWC
+2023-11-23 09:39:07,008 file: tool_utils.py func: tool_utils line No: 322 consumed time 0.0216013
+2023-11-23 09:39:07,095 file: tool_utils.py func: tool_utils line No: 322 FPS=9994.9, latency = 100.1 us, DDR = 265216 bytes   (see ./.hb_check/torch-jit-export_subgraph_33.html)
+2023-11-23 09:39:09,800 file: node_info.py func: node_info line No: 57 The converted model node information:
+========================================================================================================
+Node                                       ON   Subgraph  Type                          In/Out DataType  
+---------------------------------------------------------------------------------------------------------
+Conv_0                                     BPU  id(0)     HzSQuantizedConv              int8/int8        
+MaxPool_1                                  BPU  id(0)     HzQuantizedMaxPool            int8/int8        
+UNIT_CONV_FOR_152_calibrated_TO_FUSE_RELU  BPU  id(0)     HzSQuantizedConv              int8/int8        
+Conv_3                                     BPU  id(0)     HzSQuantizedConv              int8/int8        
+MaxPool_4                                  BPU  id(0)     HzQuantizedMaxPool            int8/int8        
+UNIT_CONV_FOR_156_calibrated_TO_FUSE_RELU  BPU  id(0)     HzSQuantizedConv              int8/int8        
+Conv_6                                     BPU  id(0)     HzSQuantizedConv              int8/int8        
+Conv_8                                     BPU  id(0)     HzSQuantizedConv              int8/int8        
+Conv_10                                    BPU  id(0)     HzSQuantizedConv              int8/int32       
+Conv_11                                    BPU  id(1)     HzSQuantizedConv              int8/int8        
+MaxPool_12                                 BPU  id(1)     HzQuantizedMaxPool            int8/int8        
+UNIT_CONV_FOR_168_calibrated_TO_FUSE_RELU  BPU  id(1)     HzSQuantizedConv              int8/int8        
+Conv_14                                    BPU  id(1)     HzSQuantizedConv              int8/int8        
+MaxPool_15                                 BPU  id(1)     HzQuantizedMaxPool            int8/int8        
+UNIT_CONV_FOR_172_calibrated_TO_FUSE_RELU  BPU  id(1)     HzSQuantizedConv              int8/int8        
+Conv_17                                    BPU  id(1)     HzSQuantizedConv              int8/int8        
+Conv_19                                    BPU  id(1)     HzSQuantizedConv              int8/int8        
+Conv_21                                    BPU  id(1)     HzSQuantizedConv              int8/int32       
+Reshape_31                                 CPU  --        Reshape                       float/float      
+Reshape_41                                 CPU  --        Reshape                       float/float      
+Conv_42                                    CPU  --        Conv                          float/float      
+Reshape_52                                 CPU  --        Reshape                       float/float      
+Conv_53                                    BPU  id(3)     HzSQuantizedConv              int8/int8        
+Reshape_64                                 CPU  --        Reshape                       float/float      
+Reshape_74                                 CPU  --        Reshape                       float/float      
+Conv_75                                    CPU  --        Conv                          float/float      
+Reshape_85                                 CPU  --        Reshape                       float/float      
+Conv_86                                    BPU  id(3)     HzSQuantizedConv              int8/int8        
+Reshape_97                                 CPU  --        Reshape                       float/float      
+Reshape_107                                CPU  --        Reshape                       float/float      
+Conv_108                                   CPU  --        Conv                          float/float      
+Reshape_118                                CPU  --        Reshape                       float/float      
+Conv_119                                   BPU  id(2)     HzSQuantizedConv              int8/int32       
+Relu_120                                   CPU  --        Relu                          float/float      
+UNIT_CONV_FOR_Add_142                      BPU  id(3)     HzSQuantizedConv              int8/int8        
+Reshape_144                                CPU  --        Reshape                       float/float      
+Transpose_145                              CPU  --        Transpose                     float/float      
+UNIT_CONV_FOR_Add_146                      BPU  id(3)     HzSQuantizedConv              int8/int8        
+Reshape_151                                CPU  --        Reshape                       float/float      
+Transpose_152                              CPU  --        Transpose                     float/float      
+UNIT_CONV_FOR_Add_153                      BPU  id(3)     HzSQuantizedConv              int8/int32       
+ReduceMean_154                             CPU  --        ReduceMean                    float/float      
+Sub_155                                    CPU  --        Sub                           float/float      
+Pow_157                                    CPU  --        Pow                           float/float      
+ReduceMean_158                             CPU  --        ReduceMean                    float/float      
+Div_162_reciprocal                         BPU  id(4)     HzLut                         int8/int8        
+Div_162_mul                                BPU  id(4)     HzSElementwiseMul             int8/int8        
+Div_162_mul364_transpose_Reshape_0         CPU  --        Reshape                       float/float      
+Pow_169                                    CPU  --        Pow                           float/float      
+ReduceMean_170                             CPU  --        ReduceMean                    float/float      
+Div_174_reciprocal                         BPU  id(5)     HzLut                         int8/int8        
+Div_174_mul                                BPU  id(5)     HzSElementwiseMul             int8/int8        
+Div_174_mul376_transpose_Reshape_0         CPU  --        Reshape                       float/float      
+MatMul_197                                 BPU  id(6)     HzSQuantizedConv              int8/int32       
+MatMul_210                                 BPU  id(7)     HzSQuantizedConv              int8/int32       
+MatMul_210_reshape_output                  CPU  --        Reshape                       float/float      
+MatMul_221_reshape_input                   CPU  --        Reshape                       float/float      
+MatMul_221                                 BPU  id(8)     HzSQuantizedConv              int8/int32       
+MatMul_221_reshape_output                  CPU  --        Reshape                       float/float      
+Mul_224446_Reshape_0                       CPU  --        Reshape                       float/float      
+Transpose_232                              CPU  --        Transpose                     float/float      
+Transpose_245                              CPU  --        Transpose                     float/float      
+Transpose_246                              CPU  --        Transpose                     float/float      
+MatMul_247                                 CPU  --        MatMul                        float/float      
+Softmax_248                                CPU  --        Softmax                       float/float      
+MatMul_249                                 CPU  --        MatMul                        float/float      
+Transpose_250                              CPU  --        Transpose                     float/float      
+Reshape_255                                CPU  --        Reshape                       float/float      
+MatMul_256                                 BPU  id(9)     HzSQuantizedConv              int8/int32       
+MatMul_256_reshape_output                  CPU  --        Reshape                       float/float      
+Add_258                                    CPU  --        Add                           float/float      
+ReduceMean_259                             CPU  --        ReduceMean                    float/float      
+Sub_260                                    CPU  --        Sub                           float/float      
+Pow_262                                    CPU  --        Pow                           float/float      
+ReduceMean_263                             CPU  --        ReduceMean                    float/float      
+Div_267_reciprocal                         CPU  --        HzRsqrt                       float/float      
+Div_267_mul                                CPU  --        Mul                           float/float      
+Mul_268                                    CPU  --        Mul                           float/float      
+Add_269                                    CPU  --        Add                           float/float      
+Transpose_270                              CPU  --        Transpose                     float/float      
+Reshape_272                                CPU  --        Reshape                       float/float      
+GlobalAveragePool_275_split_id_0           BPU  id(3)     HzQuantizedAveragePool        int8/int8        
+GlobalAveragePool_275                      BPU  id(3)     HzQuantizedGlobalAveragePool  int8/int8        
+Conv_276                                   BPU  id(3)     HzSQuantizedConv              int8/int8        
+Conv_278                                   BPU  id(3)     HzSQuantizedConv              int8/int8        
+Concat_279                                 CPU  --        Concat                        float/float      
+ConvTranspose_280                          CPU  --        ConvTranspose                 float/float      
+Mul_281                                    BPU  id(10)    HzSElementwiseMul             int8/int8        
+Mul_282                                    BPU  id(10)    HzSQuantizedConv              int8/int8        
+Mul_283                                    BPU  id(10)    HzSElementwiseMul             int8/int8        
+Add_284                                    CPU  --        Add                           float/float      
+Reshape_286                                CPU  --        Reshape                       float/float      
+Transpose_287                              CPU  --        Transpose                     float/float      
+MatMul_288_reshape_input                   CPU  --        Reshape                       float/float      
+MatMul_288                                 BPU  id(11)    HzSQuantizedConv              int8/int8        
+MatMul_291                                 BPU  id(11)    HzSQuantizedConv              int8/int32       
+MatMul_291_reshape_output                  CPU  --        Reshape                       float/float      
+Add_293                                    CPU  --        Add                           float/float      
+ReduceMean_294                             CPU  --        ReduceMean                    float/float      
+Sub_295                                    CPU  --        Sub                           float/float      
+Pow_297                                    CPU  --        Pow                           float/float      
+ReduceMean_298                             CPU  --        ReduceMean                    float/float      
+Div_302_reciprocal                         CPU  --        HzRsqrt                       float/float      
+Div_302_mul                                CPU  --        Mul                           float/float      
+Mul_303                                    CPU  --        Mul                           float/float      
+Add_304                                    CPU  --        Add                           float/float      
+ReduceMean_305                             CPU  --        ReduceMean                    float/float      
+Sub_306                                    CPU  --        Sub                           float/float      
+Pow_308                                    CPU  --        Pow                           float/float      
+ReduceMean_309                             CPU  --        ReduceMean                    float/float      
+Div_313_reciprocal                         CPU  --        HzRsqrt                       float/float      
+Div_313_mul                                CPU  --        Mul                           float/float      
+Mul_314                                    CPU  --        Mul                           float/float      
+Add_315                                    CPU  --        Add                           float/float      
+MatMul_329_reshape_input                   CPU  --        Reshape                       float/float      
+MatMul_329                                 BPU  id(12)    HzSQuantizedConv              int8/int32       
+Slice_341                                  BPU  id(13)    Slice                         int8/int8        
+Slice_344                                  CPU  --        Slice                         float/float      
+Slice_344574_Reshape_0                     CPU  --        Reshape                       float/float      
+Slice_347                                  CPU  --        Slice                         float/float      
+Slice_347577_Reshape_0                     CPU  --        Reshape                       float/float      
+Mul_349                                    BPU  id(14)    HzSQuantizedConv              int8/int32       
+Mul_349579_Reshape_0                       CPU  --        Reshape                       float/float      
+Transpose_357                              CPU  --        Transpose                     float/float      
+Transpose_370                              CPU  --        Transpose                     float/float      
+Transpose_371                              CPU  --        Transpose                     float/float      
+MatMul_372                                 CPU  --        MatMul                        float/float      
+Softmax_373                                CPU  --        Softmax                       float/float      
+MatMul_374                                 CPU  --        MatMul                        float/float      
+Transpose_375                              CPU  --        Transpose                     float/float      
+Reshape_380                                CPU  --        Reshape                       float/float      
+MatMul_381                                 BPU  id(15)    HzSQuantizedConv              int8/int32       
+MatMul_381_reshape_output                  CPU  --        Reshape                       float/float      
+Add_383                                    CPU  --        Add                           float/float      
+ReduceMean_384                             CPU  --        ReduceMean                    float/float      
+Sub_385                                    CPU  --        Sub                           float/float      
+Pow_387                                    CPU  --        Pow                           float/float      
+ReduceMean_388                             CPU  --        ReduceMean                    float/float      
+Div_392_reciprocal                         CPU  --        HzRsqrt                       float/float      
+Div_392_mul                                CPU  --        Mul                           float/float      
+Mul_393                                    CPU  --        Mul                           float/float      
+Add_394                                    CPU  --        Add                           float/float      
+MatMul_415_reshape_input                   CPU  --        Reshape                       float/float      
+MatMul_415                                 BPU  id(16)    HzSQuantizedConv              int8/int32       
+MatMul_424_reshape_input                   CPU  --        Reshape                       float/float      
+MatMul_424                                 BPU  id(17)    HzSQuantizedConv              int8/int32       
+Slice_436                                  CPU  --        Slice                         float/float      
+Slice_436687_Reshape_0                     CPU  --        Reshape                       float/float      
+Slice_439                                  CPU  --        Slice                         float/float      
+Slice_439690_Reshape_0                     CPU  --        Reshape                       float/float      
+Mul_441692_Reshape_0                       CPU  --        Reshape                       float/float      
+Transpose_449                              CPU  --        Transpose                     float/float      
+Transpose_462                              CPU  --        Transpose                     float/float      
+Transpose_463                              CPU  --        Transpose                     float/float      
+MatMul_464                                 CPU  --        MatMul                        float/float      
+Softmax_465                                CPU  --        Softmax                       float/float      
+MatMul_466                                 CPU  --        MatMul                        float/float      
+Transpose_467                              CPU  --        Transpose                     float/float      
+Reshape_472                                CPU  --        Reshape                       float/float      
+MatMul_473                                 BPU  id(18)    HzSQuantizedConv              int8/int32       
+MatMul_473_reshape_output                  CPU  --        Reshape                       float/float      
+Add_475                                    CPU  --        Add                           float/float      
+ReduceMean_476                             CPU  --        ReduceMean                    float/float      
+Sub_477                                    CPU  --        Sub                           float/float      
+Pow_479                                    CPU  --        Pow                           float/float      
+ReduceMean_480                             CPU  --        ReduceMean                    float/float      
+Div_484_reciprocal                         CPU  --        HzRsqrt                       float/float      
+Div_484_mul                                CPU  --        Mul                           float/float      
+Mul_485                                    CPU  --        Mul                           float/float      
+Add_486                                    CPU  --        Add                           float/float      
+MatMul_487_reshape_input                   CPU  --        Reshape                       float/float      
+MatMul_487                                 BPU  id(19)    HzSQuantizedConv              int8/int8        
+MatMul_490                                 BPU  id(19)    HzSQuantizedConv              int8/int32       
+MatMul_490_reshape_output                  CPU  --        Reshape                       float/float      
+Add_492                                    CPU  --        Add                           float/float      
+ReduceMean_493                             CPU  --        ReduceMean                    float/float      
+Sub_494                                    CPU  --        Sub                           float/float      
+Pow_496                                    CPU  --        Pow                           float/float      
+ReduceMean_497                             CPU  --        ReduceMean                    float/float      
+Div_501_reciprocal                         CPU  --        HzRsqrt                       float/float      
+Div_501_mul                                CPU  --        Mul                           float/float      
+Mul_502                                    CPU  --        Mul                           float/float      
+Add_503                                    CPU  --        Add                           float/float      
+MatMul_517_reshape_input                   CPU  --        Reshape                       float/float      
+MatMul_517                                 BPU  id(20)    HzSQuantizedConv              int8/int32       
+Slice_529                                  BPU  id(21)    Slice                         int8/int8        
+Slice_532                                  CPU  --        Slice                         float/float      
+Slice_532791_Reshape_0                     CPU  --        Reshape                       float/float      
+Slice_535                                  CPU  --        Slice                         float/float      
+Slice_535794_Reshape_0                     CPU  --        Reshape                       float/float      
+Mul_537                                    BPU  id(22)    HzSQuantizedConv              int8/int32       
+Mul_537796_Reshape_0                       CPU  --        Reshape                       float/float      
+Transpose_545                              CPU  --        Transpose                     float/float      
+Transpose_558                              CPU  --        Transpose                     float/float      
+Transpose_559                              CPU  --        Transpose                     float/float      
+MatMul_560                                 CPU  --        MatMul                        float/float      
+Softmax_561                                CPU  --        Softmax                       float/float      
+MatMul_562                                 CPU  --        MatMul                        float/float      
+Transpose_563                              CPU  --        Transpose                     float/float      
+Reshape_568                                CPU  --        Reshape                       float/float      
+MatMul_569                                 BPU  id(23)    HzSQuantizedConv              int8/int32       
+MatMul_569_reshape_output                  CPU  --        Reshape                       float/float      
+Add_571                                    CPU  --        Add                           float/float      
+ReduceMean_572                             CPU  --        ReduceMean                    float/float      
+Sub_573                                    CPU  --        Sub                           float/float      
+Pow_575                                    CPU  --        Pow                           float/float      
+ReduceMean_576                             CPU  --        ReduceMean                    float/float      
+Div_580_reciprocal                         CPU  --        HzRsqrt                       float/float      
+Div_580_mul                                CPU  --        Mul                           float/float      
+Mul_581                                    CPU  --        Mul                           float/float      
+Add_582                                    CPU  --        Add                           float/float      
+MatMul_603_reshape_input                   CPU  --        Reshape                       float/float      
+MatMul_603                                 BPU  id(24)    HzSQuantizedConv              int8/int32       
+MatMul_612                                 BPU  id(17)    HzSQuantizedConv              int8/int32       
+Slice_624                                  CPU  --        Slice                         float/float      
+Slice_624904_Reshape_0                     CPU  --        Reshape                       float/float      
+Slice_627                                  CPU  --        Slice                         float/float      
+Slice_627907_Reshape_0                     CPU  --        Reshape                       float/float      
+Mul_629909_Reshape_0                       CPU  --        Reshape                       float/float      
+Transpose_637                              CPU  --        Transpose                     float/float      
+Transpose_650                              CPU  --        Transpose                     float/float      
+Transpose_651                              CPU  --        Transpose                     float/float      
+MatMul_652                                 CPU  --        MatMul                        float/float      
+Softmax_653                                CPU  --        Softmax                       float/float      
+MatMul_654                                 CPU  --        MatMul                        float/float      
+Transpose_655                              CPU  --        Transpose                     float/float      
+Reshape_660                                CPU  --        Reshape                       float/float      
+MatMul_661                                 BPU  id(25)    HzSQuantizedConv              int8/int32       
+MatMul_661_reshape_output                  CPU  --        Reshape                       float/float      
+Add_663                                    CPU  --        Add                           float/float      
+ReduceMean_664                             CPU  --        ReduceMean                    float/float      
+Sub_665                                    CPU  --        Sub                           float/float      
+Pow_667                                    CPU  --        Pow                           float/float      
+ReduceMean_668                             CPU  --        ReduceMean                    float/float      
+Div_672_reciprocal                         CPU  --        HzRsqrt                       float/float      
+Div_672_mul                                CPU  --        Mul                           float/float      
+Mul_673                                    CPU  --        Mul                           float/float      
+Add_674                                    CPU  --        Add                           float/float      
+MatMul_675_reshape_input                   CPU  --        Reshape                       float/float      
+MatMul_675                                 BPU  id(26)    HzSQuantizedConv              int8/int8        
+MatMul_678                                 BPU  id(26)    HzSQuantizedConv              int8/int32       
+MatMul_678_reshape_output                  CPU  --        Reshape                       float/float      
+Add_680                                    CPU  --        Add                           float/float      
+ReduceMean_681                             CPU  --        ReduceMean                    float/float      
+Sub_682                                    CPU  --        Sub                           float/float      
+Pow_684                                    CPU  --        Pow                           float/float      
+ReduceMean_685                             CPU  --        ReduceMean                    float/float      
+Div_689_reciprocal                         CPU  --        HzRsqrt                       float/float      
+Div_689_mul                                CPU  --        Mul                           float/float      
+Mul_690                                    CPU  --        Mul                           float/float      
+Add_691                                    CPU  --        Add                           float/float      
+ReduceMean_692                             CPU  --        ReduceMean                    float/float      
+Sub_693                                    CPU  --        Sub                           float/float      
+Pow_695                                    CPU  --        Pow                           float/float      
+ReduceMean_696                             CPU  --        ReduceMean                    float/float      
+Div_700_reciprocal                         CPU  --        HzRsqrt                       float/float      
+Div_700_mul                                CPU  --        Mul                           float/float      
+Mul_701                                    CPU  --        Mul                           float/float      
+Add_702                                    CPU  --        Add                           float/float      
+Transpose_703                              CPU  --        Transpose                     float/float      
+Reshape_705                                CPU  --        Reshape                       float/float      
+Conv_706                                   BPU  id(27)    HzSQuantizedConv              int8/int32       
+Reshape_708                                CPU  --        Reshape                       float/float      
+InstanceNormalization_711                  CPU  --        InstanceNormalization         float/float      
+Reshape_713                                CPU  --        Reshape                       float/float      
+Mul_714                                    BPU  id(28)    HzSQuantizedConv              int8/int8        
+Conv_717                                   BPU  id(28)    HzSQuantizedConv              int8/int32       
+Reshape_719                                CPU  --        Reshape                       float/float      
+InstanceNormalization_722                  CPU  --        InstanceNormalization         float/float      
+Reshape_724                                CPU  --        Reshape                       float/float      
+Mul_725                                    BPU  id(29)    HzSQuantizedConv              int8/int8        
+Conv_728                                   BPU  id(29)    HzSQuantizedConv              int8/int32       
+Reshape_730                                CPU  --        Reshape                       float/float      
+InstanceNormalization_733                  CPU  --        InstanceNormalization         float/float      
+Reshape_735                                CPU  --        Reshape                       float/float      
+Mul_736                                    BPU  id(30)    HzSQuantizedConv              int8/int8        
+Conv_739                                   BPU  id(30)    HzSQuantizedConv              int8/int32       
+Conv_740                                   BPU  id(27)    HzSQuantizedConv              int8/int32       
+Reshape_742                                CPU  --        Reshape                       float/float      
+InstanceNormalization_745                  CPU  --        InstanceNormalization         float/float      
+Reshape_747                                CPU  --        Reshape                       float/float      
+Mul_748                                    BPU  id(31)    HzSQuantizedConv              int8/int8        
+Conv_751                                   BPU  id(31)    HzSQuantizedConv              int8/int32       
+Reshape_753                                CPU  --        Reshape                       float/float      
+InstanceNormalization_756                  CPU  --        InstanceNormalization         float/float      
+Reshape_758                                CPU  --        Reshape                       float/float      
+Mul_759                                    BPU  id(32)    HzSQuantizedConv              int8/int8        
+Conv_762                                   BPU  id(32)    HzSQuantizedConv              int8/int32       
+Reshape_764                                CPU  --        Reshape                       float/float      
+InstanceNormalization_767                  CPU  --        InstanceNormalization         float/float      
+Reshape_769                                CPU  --        Reshape                       float/float      
+Mul_770                                    BPU  id(33)    HzSQuantizedConv              int8/int8        
+Conv_773                                   BPU  id(33)    HzSQuantizedConv              int8/int32       
+Conv_774                                   BPU  id(33)    HzSQuantizedConv              int8/int32       
+Transpose_775_reshape                      CPU  --        Reshape                       float/float      
+Transpose_778                              CPU  --        Transpose                     float/float      
+Softmax_779                                CPU  --        Softmax                       float/float      
+Gather_781                                 CPU  --        Gather                        float/float      
+Gather_781_reshape                         CPU  --        Reshape                       float/float
+2023-11-23 09:39:09,809 file: build.py func: build line No: 35 [Thu Nov 23 09:39:09 2023] End to Horizon NN Model Convert.
+2023-11-23 09:39:09,826 file: onnx2horizonrt.py func: onnx2horizonrt line No: 4281 ONNX model output num : 3
+2023-11-23 09:39:09,932 file: onnx2horizonrt.py func: onnx2horizonrt line No: 4015 model_deps_info: {'hb_mapper_version': '1.21.6'}
+2023-11-23 09:39:09,974 file: hb_mapper_checker.py func: hb_mapper_checker line No: 167 End model checking....
